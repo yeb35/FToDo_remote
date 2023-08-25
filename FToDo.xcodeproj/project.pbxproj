@@ -37,6 +37,7 @@
 		159CB6302A9624CA0013340E /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CB62F2A9624CA0013340E /* Users.swift */; };
 		159CB6322A9626A90013340E /* ToDoListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CB6312A9626A90013340E /* ToDoListItem.swift */; };
 		159CB6342A9626B60013340E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CB6332A9626B60013340E /* Extensions.swift */; };
+		15F831BF2A973C0300EB93A3 /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F831BE2A973C0300EB93A3 /* Admin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		159CB62F2A9624CA0013340E /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		159CB6312A9626A90013340E /* ToDoListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListItem.swift; sourceTree = "<group>"; };
 		159CB6332A9626B60013340E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		15F831BE2A973C0300EB93A3 /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				159CB62F2A9624CA0013340E /* Users.swift */,
+				15F831BE2A973C0300EB93A3 /* Admin.swift */,
 				159CB62D2A96227F0013340E /* Other */,
 			);
 			path = Models;
@@ -375,6 +378,7 @@
 				159CB6172A9621830013340E /* MainViewViewModel.swift in Sources */,
 				159CB6192A9621830013340E /* LoginViewViewModel.swift in Sources */,
 				159CB6152A9621830013340E /* NewItemViewModel.swift in Sources */,
+				15F831BF2A973C0300EB93A3 /* Admin.swift in Sources */,
 				159CB62C2A9621A10013340E /* ToDoListViews.swift in Sources */,
 				159CB6132A9621830013340E /* ToDoListViewViewModel.swift in Sources */,
 				159CB6342A9626B60013340E /* Extensions.swift in Sources */,

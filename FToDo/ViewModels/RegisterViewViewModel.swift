@@ -7,8 +7,9 @@ class RegisterViewViewModel: ObservableObject{
     @Published var surname = ""
     @Published var email = ""
     @Published var password = ""
-    @Published var object = ""
-    @Published var phoneNumber = 0.0
+    @Published var role = ""
+    @Published var phoneNumber = ""
+    @Published var resume = ""
     
     init(){ }
     
@@ -34,7 +35,8 @@ class RegisterViewViewModel: ObservableObject{
                            email: email,
                            joined: Date().timeIntervalSince1970,
                            phonenumber: phoneNumber,
-                           object: object)
+                           role: role,
+                           resume: resume)
         
         let db = Firestore.firestore()
         db.collection("users")
@@ -45,7 +47,10 @@ class RegisterViewViewModel: ObservableObject{
     private func validate() -> Bool{
         guard   !name.trimmingCharacters(in: .whitespaces).isEmpty,
                 !email.trimmingCharacters(in: .whitespaces).isEmpty,
-                !password.trimmingCharacters(in: .whitespaces).isEmpty
+                !password.trimmingCharacters(in: .whitespaces).isEmpty,
+                !phoneNumber.trimmingCharacters(in: .whitespaces).isEmpty,
+                !surname.trimmingCharacters(in: .whitespaces).isEmpty,
+                !role.trimmingCharacters(in: .whitespaces).isEmpty
         else{
             return false
         }
@@ -55,6 +60,11 @@ class RegisterViewViewModel: ObservableObject{
             return false
         }
         
+        guard resume.count <= 3096
+        else{
+            return false
+        }
+                
         guard password.count >= 6
         else{
             return false //password

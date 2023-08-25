@@ -8,11 +8,15 @@ struct RegisterView: View {
             //Header
             HeaderView(title: "Register",
                        subtitle: "Start Organizing Todo",
-                       angle: -15,
+                       angle: -20,
                        background: .orange)
             
             Form{
-                TextField("Full Name", text: $viewModel.name)
+                TextField("Name", text: $viewModel.name)
+                    .textFieldStyle(DefaultTextFieldStyle())
+                    .autocorrectionDisabled()
+                
+                TextField("Surname", text: $viewModel.surname)
                     .textFieldStyle(DefaultTextFieldStyle())
                     .autocorrectionDisabled()
                 
@@ -21,9 +25,23 @@ struct RegisterView: View {
                         .autocapitalization(.none)
                         .autocorrectionDisabled()
                 
+                TextField("Role", text: $viewModel.role)
+                    .textFieldStyle(DefaultTextFieldStyle())
+                    .autocorrectionDisabled()
+                
+                TextField("Phone Number", text: $viewModel.phoneNumber)
+                    .textFieldStyle(DefaultTextFieldStyle())
+                    .autocorrectionDisabled()
+                
                 SecureField("Password", text: $viewModel.password)
                         .textFieldStyle(DefaultTextFieldStyle())
                 
+                TextField("About yourself max 3096 character", text: $viewModel.resume)
+                            .textFieldStyle(DefaultTextFieldStyle())
+                            .autocorrectionDisabled()
+                            .frame(minHeight: 50)
+                        .padding()
+              
                 TLButton(title: "Create an Account",
                          background: .green)
                 {
@@ -33,7 +51,7 @@ struct RegisterView: View {
                 
                 .padding()
             }
-            .offset(y: -50)
+            .offset(y: -150)
             
             Spacer()
         }

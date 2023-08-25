@@ -60,9 +60,9 @@ struct ProfileView: View {
             .padding()
             
             HStack{
-                Text("Object ")
+                Text("Role ")
                     .bold()
-                Text(user.object)
+                Text(user.role)
             }
             .padding()
             

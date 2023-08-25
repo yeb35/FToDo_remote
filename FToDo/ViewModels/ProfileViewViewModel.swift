@@ -23,8 +23,9 @@ class ProfileViewViewModel: ObservableObject{
                     surname: data["surname"] as? String ?? "",
                     email: data["email"] as? String ?? "",
                     joined: data["joined"] as? TimeInterval ?? 0,
-                    phonenumber: data["phonenumber"] as? Double ?? 0,
-                    object: data["object"] as? String ?? "")
+                    phonenumber: data["phonenumber"] as? String ?? "",
+                    role: data["role"] as? String ?? "",
+                    resume: data["resume"] as? String ?? "")
             }
         }
     }

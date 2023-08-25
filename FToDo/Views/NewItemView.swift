@@ -7,19 +7,30 @@ struct NewItemView: View {
     
     var body: some View {
         VStack{
-            Text("New Item")
+            Text("New Task")
                 .font(.system(size: 32))
                 .bold()
                 .padding(.top, 100)
             
             Form{
                 // Title
-                TextField("Title", text: $viewModel.title)
+                TextField("Task Title", text: $viewModel.title)
                     .textFieldStyle(DefaultTextFieldStyle())
+                //Current time
+
+                DatePicker("Create Date", selection: $viewModel.createdDate)
+                    
+                
                 // Due date
-                DatePicker("Due Date", selection: $viewModel.dueDate)
-                    .datePickerStyle(GraphicalDatePickerStyle())
-                // .datePickerStyle(DateInterval(start: Date, end: Date))
+                VStack{
+                    Text("Due Date")
+                        .bold()
+                    DatePicker("Due Date", selection: $viewModel.dueDate)
+                        .datePickerStyle(GraphicalDatePickerStyle())
+                    // .datePickerStyle(DateInterval(start: Date, end: Date))}
+                }
+                
+                
                 // Button
                 TLButton(title: "Save", background: .pink){
                     if viewModel.canSave{

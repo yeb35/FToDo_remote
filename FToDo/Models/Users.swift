@@ -7,7 +7,10 @@ struct User: Codable{
     let surname: String
     let email: String
     let joined: TimeInterval
-    let phonenumber: Double
-    let object: String
+    let phonenumber: String
+    let role: String
+    let resume: String
+    //let alive: Bool
+
     
 }

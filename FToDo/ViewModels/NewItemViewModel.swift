@@ -4,6 +4,7 @@ import FirebaseFirestore
 
 class NewItemViewViewModel: ObservableObject {
     @Published var title = ""
+    @Published var createdDate = Date()
     @Published var dueDate = Date()
     @Published var showAlert = false
     
@@ -24,7 +25,7 @@ class NewItemViewViewModel: ObservableObject {
             id: newId,
             title: title,
             dueDate: dueDate.timeIntervalSince1970,
-            createdDate: Date().timeIntervalSince1970,
+            createdDate: Date().timeIntervalSinceNow,
             isDone: false)
         
         //save model
